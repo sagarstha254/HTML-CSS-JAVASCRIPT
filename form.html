@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form name="middle" onsubmit="valido()">
+        <p>First name: <input type="text" name="Firstname"></p>
+        <p>Last name: <input type="text" name="lastname"></p>
+        <p>Gender: <input type="radio" name="Gender" value="male"> male
+            <input type="radio" name="Gender" value="female" checked>Female
+        </p>
+        <p>Message: <br>
+            <textarea name="message" rows="10" cols="30" placeholder="Enter message"></textarea>
+        </p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+
+    <script>
+        function valido() {
+            let fname = document.forms["middle"]["Firstname"].value;
+            let lname = document.forms["middle"]["lastname"].value;
+            let Gender = document.forms["middle"]["Gender"].value;
+            let message = document.forms["middle"]["message"].value;
+
+            if (fname == "" || lname == "" || message == "") {
+                alert("Empyt fields found.");
+            }
+            else {
+                alert("Thank you for the participation");
+            }
+        }
+    </script>
+</body>
+
+</html>

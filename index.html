@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS demo</title>
+    <style>
+        .call {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="call" id="c1">JAVA</td>
+            <td class="call" id="c2">HTML</td>
+            <td class="call" id="c3">CSS</td>
+            <td class="call" id="c4">JAVASCRIPT</td>
+        </tr>
+    </table>
+
+    <button onclick="change()">Change color</button>
+
+    <script>
+        function change() {
+            var colors = ["red", "blue", "yellow", "green"];
+            var c1 = document.getElementById("c1");
+            var c2 = document.getElementById("c2");
+            var c3 = document.getElementById("c3");
+            var c4 = document.getElementById("c4");
+            var cells = [c1, c2, c3, c4];
+
+            for (var i = 0; i < cells.length; i++) {
+                var random_i = Math.trunc(Math.random() * 4);
+                cells[i].style.backgroundColor = colors[random_i];
+
+            }
+        }
+        change();
+    </script>
+</body>
+
+</html>

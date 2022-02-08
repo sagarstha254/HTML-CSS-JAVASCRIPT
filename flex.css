@@ -1,0 +1,36 @@
+.body{
+    background-color: gray;
+}
+
+.row{
+display: flex;
+}
+
+.left{
+flex: 75%;
+}
+
+.right{
+flex: 25%;
+padding-left: 20px;
+}
+
+.card{
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+
+.header{
+padding: 10px;
+font-size: 35px;
+text-align: center;
+background: white;
+}
+
+.footer{
+padding: 20px;
+text-align: center;
+margin-top: 20px;
+background: #ddd;
+}
